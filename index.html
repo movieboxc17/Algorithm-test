@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A* Pathfinding Algorithm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        
+        #grid {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .row {
+            display: flex;
+        }
+        
+        .cell {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ccc;
+            margin: 1px;
+            display: inline-block;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .start {
+            background-color: green;
+        }
+        
+        .end {
+            background-color: red;
+        }
+        
+        .wall {
+            background-color: black;
+        }
+        
+        .visited {
+            background-color: lightblue;
+        }
+        
+        .path {
+            background-color: yellow;
+        }
+        
+        .controls {
+            margin: 20px 0;
+        }
+        
+        button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>A* Pathfinding Algorithm Visualization</h1>
+    
+    <div class="controls">
+        <button id="startBtn">Start Pathfinding</button>
+        <button id="resetBtn">Reset Grid</button>
+        <select id="speed">
+            <option value="10">Fast</option>
+            <option value="50" selected>Medium</option>
+            <option value="100">Slow</option>
+        </select>
+    </div>
+    
+    <div class="controls">
+        <label>
+            <input type="radio" name="mode" value="start" checked> Set Start
+        </label>
+        <label>
+            <input type="radio" name="mode" value="end"> Set End
+        </label>
+        <label>
+            <input type="radio" name="mode" value="wall"> Add/Remove Walls
+        </label>
+    </div>
+    
+    <div id="grid"></div>
+    
+    <script src="astar.js"></script>
+</body>
+</html>
